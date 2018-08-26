@@ -1,0 +1,38 @@
+body{
+    font-family: helvetica;
+}
+
+main{
+    margin: 10px;
+    padding:10px;
+    background-color: #EAEAEA;
+    border-radius: 1%;
+}
+
+img{
+    max-width: 100%; 
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    border: 5px solid white;
+    border-radius: 12px;
+}
+
+
+#tribute-intro{
+    text-align: center;
+}
+#tribute-info{
+    padding: 5px;
+}
+
+li{
+    margin-bottom: 5px;
+}
+
+aside{
+    margin-top: 3%;
+    text-align: center;
+    font-style: italic
+}
+

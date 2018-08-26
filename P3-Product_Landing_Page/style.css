@@ -1,0 +1,191 @@
+*{
+	padding: 0;
+	margin: 0;
+	line-height: 1.6;
+	box-sizing: border-box;
+}
+body{
+	font-size: 18px;
+	font-family: system-ui;
+}
+img{
+	width: 100%;
+	display:block;
+  height: auto;
+}
+
+.header-container{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #2f2f2f;
+	background: #1f1f1f;
+  z-index: 9999;
+}
+nav ul{
+	display: flex;
+	justify-content: space-between;
+}
+.logo{
+	align-self: center;
+	padding: 0.2em 0;
+}
+.logo img{
+	height: 11vh;
+  width: auto;
+}
+
+header ul li{
+	display: inline-block;
+	padding: 10px 15px;
+	font-size: 1em;
+}
+
+header ul li a{
+	display: block;
+	text-decoration: none;
+	color: #f7f7f7;
+}
+
+header ul li a:hover{
+	color: #C0C0C0;
+}
+
+header ul li:hover{
+	border-bottom: 2px solid chocolate;
+}
+
+
+@media(min-width:640px){
+	.header-container{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	nav{
+		align-self: center;
+		margin: 0 0.8em 0 0;
+	}
+}
+
+
+.container{
+	display: flex;
+	align-items: center; 
+}
+.container div{
+	padding: 10px;
+}
+.container-img-box{
+	flex-basis: 400%
+}
+
+.products{
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-card{
+  padding:2%;
+  flex: 1 33.3%;
+  display: flex;
+  flex-direction: column;
+}
+.product-info{
+  margin-top:auto;
+  text-align: center;
+}
+.product-image img{
+  max-width: 100%;
+}
+
+#main-content{
+	width: 90%;
+	margin: 6em auto;
+	padding: 10px 0px;
+	/*text-align: center;*/
+}
+#intro{
+	float: right;
+}
+#feature{
+  margin: 3em;
+}
+
+.bash_img{
+	float:left;
+	width: 40%;
+	height: auto;
+	margin-top: -7%;
+}
+
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+  overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#form-container{
+  font-size: 20px;
+  color: white;
+  background:url("https://images.pexels.com/photos/237907/pexels-photo-237907.jpeg?auto=compress&cs=tinysrgb&h=350")no-repeat center center;
+  background-size: cover;
+  height: 550px;
+}
+
+#signUp_form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+  padding:50px;
+  
+}
+#signUp_form form{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-direction: column; 
+} 
+input[type="email"]{
+  width: 375px;
+  padding: 5px;
+}
+#signUp_form .button{
+  margin: 30px auto;
+  padding: 10px 20px;
+  width: 40%;
+  font-size: 20px;
+  background-color: #2BBBD8; 
+  border-radius: 6px;
+  cursor: pointer;
+}
+#signUp_form .button:hover{
+  background-color: rgba(0,160,62,1);
+  color: white;
+}
+#main-footer{
+	padding: 10px;
+	color: #9f9f9f;
+	background-color: #1f1f1f;
+	text-align: center;
+}
+#main-footer a{
+	display: inline-block;
+	color: white;
+	font-size: 50px;
+	width: 40%;
+	padding: 10px;
+}

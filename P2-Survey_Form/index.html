@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey_form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="container">
+		<div id="Title"> <h1>Survey Form</h1> </div>
+		<div id="discription"><p>CoderOO7 website Survey</p></div>
+		<form id="survey-form">
+			<div>
+				<label for="name" id="name-label">Name:</label>
+				<input id="name" type="text" name="" placeholder="Your Name">
+			</div>
+
+			<div>
+				<label for="email" id="email-label">Email:</label>
+				<input id="email" type="email" name="" placeholder="xyz@gmail.com"required="" >
+			</div>
+
+			<div>
+				<label for="number" id="number-label">Age:</label>
+				<input id="number" type="text" name="" placeholder="Your age">
+			</div>
+
+			<fieldset>
+				<legend>Which topics you like most</legend>
+				<label><input type="checkbox" name="topic">Tech</label>
+				<label><input type="checkbox" name="topic">Tricks</label>
+				<label><input type="checkbox" name="topic">Programming</label>
+				<label><input type="checkbox" name="topic">Etc</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>Article content</legend>
+				<label><input type="radio" name="content">Good</label>
+				<label><input type="radio" name="content">Average</label>
+				<label><input type="radio" name="content">Below average</label>
+			</fieldset>
+
+			<label for="comments">Suggestion or tips:</label>
+			<textarea id="comments" name="comments" maxlength="500" rows="10" cols="60"></textarea>
+
+			<button id="submit">Submit</button>
+			
+		</form>
+	</div>
+</body>
+</html>
