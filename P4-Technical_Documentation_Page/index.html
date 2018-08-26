@@ -6,22 +6,269 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<nav id="left" class="side-nav column">
-		<!-- <div class="top-left">top-left</div>
+	<nav id="navbar" class="side-nav column">
+		<!-- <div class="top-left">top-left</div> 
 		<div class="bottom">bottom</div> -->
-		<header>Microprocessor-8085</header>
+		<header><strong>Microprocessor-8085</strong></header>
 		<ul>
-			<li><a href="#">Link</a></li>
-			<li><a href="#">Link</a></li>
-			<li><a href="#">Link</a></li>
-			<li><a href="#">Link</a></li>
-			<li><a href="#">Link</a></li>
+			<li><a href="#Introduction" class="nav-link">Introduction</a></li>
+			<li><a href="#Functional_Units" class="nav-link">Functional Units</a></li>
+			<li><a href="#8085_Architecture" class="nav-link">Architecture</a></li>
+			<li><a href="#" class="nav-link">8085 Pin Configuration</a></li>
+			<li><a href="#" class="nav-link">Link</a></li>
 		</ul>	
 	</nav>
 
-	<main id="right" class="main-content column">
-		<div class="top-right">top-right</div>
-		<div class="bottom">bottom</div>
+	<main id="main-doc" class="column">
+		<section class="main-section" id="Introduction">
+      <header>
+        <h2>Introduction</h2>
+        <p>It is an 8-bit microprocessor designed by Intel in 1977 using NMOS technology.</p>
+      </header>
+      <p>It has the following configuration −</p>
+      <code>
+        <ul class="list">
+          <li>8-bit data bus</li> 
+          <li>16-bit address bus, which can address upto 64KB</li> 
+          <li>A 16-bit program counter</li> 
+          <li>A 16-bit stack pointer</li> 
+          <li>Six 8-bit registers arranged in pairs: BC, DE, HL</li> 
+          <li>Requires +5V supply to operate at 3.2 MHZ single phase clock</li> 
+        </ul>
+      </code>
+    </section>
+    <section class="main-section" id="Functional_Units">
+      <header>
+        <h2>Functional Units</h2>
+        <p>8085 consists of the following functional units −</p>
+      </header>
+      <h3>Accumulator</h3>
+      <p>It is an 8-bit register used to perform arithmetic, logical, I/O &amp; LOAD/STORE operations.<i> It is connected to internal data bus &amp; ALU.</i></p>
+      
+      <h3>Arithmetic and logic unit</h3>
+      <p>It performs arithmetic and logical operations like Addition, Subtraction, AND, OR, etc. on 8-bit data.</p>
+      
+      <h3>General purpose register</h3>
+      <p>There are 6 general purpose registers in 8085 processor, i.e. B, C, D, E, H &amp; L. Each register can hold 8-bit data.</p>
+      <p>These registers can work in pair to hold 16-bit data and their pairing combination is like B-C, D-E &amp; H-L.</p>
+      
+      <h3>Program counter</h3>
+      <p>It is a 16-bit register used to store the memory address location of the next instruction to be executed.</p>
+      
+      <h3>Stack pointer</h3>
+      <p>It is also a 16-bit register works like stack, which is always incremented/decremented by 2 during push &amp; pop operations.</p>
+      
+      <h3>Temporary register</h3>
+      <p>It is an 8-bit register, which holds the temporary data of arithmetic and logical operations.</p>
+      
+      <h3>Flag register</h3>
+      <p>It is an 8-bit register having five 1-bit flip-flops, which holds either 0 or 1 depending upon the result stored in the accumulator.</p>
+      <p>These are the set of 5 flip-flops −</p>
+      <ul class="list">
+        <li>Sign (S)</li> 
+        <li>Zero (Z)</li> 
+        <li>Auxiliary Carry (AC)</li> 
+        <li>Parity (P)</li> 
+        <li>Carry (C)</li>
+      </ul>
+      <table class="table table-bordered">
+        <thead>
+          <th>D7</th>
+          <th>D6</th>
+          <th>D5</th>
+          <th>D4</th>
+          <th>D3</th>
+          <th>D2</th>
+          <th>D1</th>
+          <th>D0</th>
+        </thead>
+        <tdata>
+          <tr>
+          <td>S</td>
+          <td>Z</td>
+          <td></td>
+          <td>AC</td>
+          <td></td>
+          <td>P</td>
+          <td></td>
+          <td>CY</td>
+          </tr>
+        </tdata>
+      </table>
+      
+      <h3>Instruction register and decoder</h3>
+      <p>It is an 8-bit register. When an instruction is fetched from memory then it is stored in the Instruction register. Instruction decoder decodes the information present in the Instruction register.</p>
+      
+      <h3>Timing and control unit</h3>
+      <p>It provides timing and control signal to the microprocessor to perform operations. Following are the timing and control signals, which control external and internal circuits −</p>
+      <code><ul class="list">
+        <li>Control Signals: READY, RD, WR, ALE</li>
+        <li>Status Signals: S0, S1, IO/M</li> 
+        <li>DMA Signals: HOLD, HLDA</li>
+        <li>RESET Signals: RESET IN, RESET OUT</li>
+      </ul>
+      </code>
+      
+      <h3>Interrupt control</h3>
+      <p>It controls the interrupts during a process. When a microprocessor is executing a main program and whenever an interrupt occurs, the microprocessor shifts the control from the main program to process the incoming request. After the request is completed, the control goes back to the main program.</p>
+      <code><p>There are 5 interrupt signals in 8085 microprocessor: INTR, RST 7.5, RST 6.5, RST 5.5, TRAP.</p></code>
+      
+      <h3>Serial Input/output control</h3>
+      <p>It controls the serial data communication by using these two instructions: SID (Serial input data) and SOD (Serial output data).</p>
+      
+      <h3>Address buffer and address-data buffer</h3>
+      <p>The content stored in the stack pointer and program counter is loaded into the address buffer and address-data buffer to communicate with the CPU. The memory and I/O chips are connected to these buses; the CPU can exchange the desired data with the memory and I/O chips.</p>
+      
+      <h3>Address bus and data bus</h3>
+      <p>Data bus carries the data to be stored. It is bidirectional, whereas address bus carries the location to where it should be stored and it is unidirectional. It is used to transfer the data &amp; Address I/O devices.</p>
+    </section>
+    <section class="main-section" id="8085_Architecture" >
+      <header>
+        <h2>8085 Architecture</h2>
+        <p>We have tried to depict the architecture of 8085 with this following image −</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Intel_8085_arch.svg/800px-Intel_8085_arch.svg.png" alt="_blank">
+      </header>
+    </section>
+    <section class="main-section" id="8085_Pin_Configuration">
+      <header>
+        <h1>Microprocessor - 8085 Pin Configuration</h1>
+        <p>Pin diagram of 8085 microprocessor is as given below:</p>
+        <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/8085-PIN-1.png" alt="">
+      </header>
+      <p>The pins of a 8085 microprocessor can be classified into seven groups-</p>
+      
+      <h3>Address bus</h3>
+      <p>It is a group of wires or lines used to transfer the addresses of Memory or I/O devices.</p>
+      <ul class="list">
+        <li>A15-A8, it carries the <em>most significant 8-bits</em> of memory/IO address.</li>
+        <li>It is unidirectional that is address flows from microprocessor to prepherial(memory-devices).</li>
+        <li>This bus is multiplexed with 8 bit data bus. So the most significant bits (MSB) of address goes through Address bus (A7-A0) and LSB goes through multiplexed data bus (AD0-AD7).</li>
+      </ul>
+      
+      <h3>Data bus</h3>
+      <p>It is used to transfer data within Microprocessor and Memory/Input or Output devices.</p>
+      <ul class="list">
+       <li>AD7-AD0, it carries the <em>least significant 8-bit</em> address and data bus.</li>
+       <li>It is bidirectional as Microprocessor requires to send or receive data.</li> 
+       <li>The data bus also works as address bus when multiplexed with lower order address bus.</li>
+       <li>The word length of a processor depends on data bus, thats why Intel 8085 is called 8 bit Microprocessor because it have an 8 bit data bus.</li>  
+      </ul>
+      
+      <h3>Control and status signals</h3>
+      <p>Three control signals are RD, WR &amp; ALE.</p>
+      <code>
+        <ul class="list">
+        <li><p><b>RD</b> − It is a signal to control READ operation. When it is low the selected memory or input-output device is read.</p></li>
+        <li><p><b>WR</b> −  It is a signal to control WRITE operation. When it goes low the data on the data bus is written into the selected memory or I/O location.</p></li>
+        <li><p><b>ALE</b> − It is a positive going pulse generated when a new operation is started by the microprocessor. When the pulse goes high, it indicates address. When the pulse goes down it indicates data.</p></li>
+      </ul>
+      </code>
+      <p>Three status signals are IO/M, S0 &amp; S1.</p>
+      <code>
+        <ul class="list">
+          <li><p><b>IO/M</b> - It determines whether the address is for input-output or memory. When it is high(1) the address on the address bus is for input-output devices. When it is low(0) the address on the address bus is for the memory.</p></li>
+          <li><p><b>S0 &amp; S1</b> - They determine the types of operations such as halt, reading, instruction fetching or writing.</p></li>
+        </ul>
+      </code>
+      <table style="width:80%">
+        <thead>
+          <tr>
+          <th>IO/M’</th>
+          <th>S1</th>
+          <th>S0</th>
+          <th>Data Bus Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>Opcode fetch</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>Memory read</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>Memory write</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>I/O read</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>I/O write</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>Interrupt acknowledge</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>Halt</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h3>Power supply</h3>
+      <p>There are 2 power supply signals − VCC &amp; VSS. VCC indicates +5v power supply and VSS indicates ground signal.</p>
+      
+      <h3>Power Supply and Clock Frequency:</h3>
+      <code><ul class="list">
+        <li><b>Vcc –</b> +5v power supply
+        </li>
+        <li><b>Vss –</b> Ground Reference
+        </li>
+        <li><b>XI, X2 –</b> A crystal is connected at these two pins. The frequency is internally divided by two, therefore, to operate a system at 3MHZ the crystal should have frequency of 6MHZ.
+        </li>
+        <li><b>CLK (OUT) –</b> This signal can be used as the system clock for other devices.
+        </li>
+      </ul></code>
+      
+      <h3>Interrupts &amp; externally initiated signals</h3>
+      <p>The 8085 has five interrupt signals that can be used to interrupt a program execution.</p>
+      <p>
+        (i) INTR<br>
+        (ii) RST 7.5<br>
+        (iii) RST 6.5<br>
+        (iv) RST 5.5<br>
+        (v) TRAP
+      </p>
+      <p>In addition to Interrupts, there are three externally initiated signals namely RESET, HOLD and READY. To respond to HOLD request, it has one signal called HLDA.</p>
+      <ul class="list">
+        <li><p><b>INTR</b> – It is an interrupt request signal.</p></li>
+        <li><p><b>INTA</b> − It is an interrupt acknowledgment signal sent by the microprocessor after INTR is received.</p></li> 
+        <li><p><b>RESET IN</b> − This signal is used to reset the microprocessor by setting the program counter to zero.</p></li>
+        <li><p><b>RESET OUT</b> − This signal is used to reset all the connected devices when the microprocessor is reset.</p></li>
+        <li><p><b>READY</b> − This signal indicates that the device is ready to send or receive data. If READY is low, then the CPU has to wait for READY to go high.</p></li>
+        <li><p><b>HOLD</b> − This signal indicates that another master is requesting the use of the address and data buses.</p></li>
+        <li><p><b>HLDA (HOLD Acknowledge)</b> − It indicates that the CPU has received the HOLD request and it will relinquish the bus in the next clock cycle. HLDA is set to low after the HOLD signal is removed.</p></li>
+    </ul>
+      
+      <h3>Serial I/O Ports:</h3>
+      <p>Serial transmission in 8085 is implemented by the two signals -</p>
+      <ul class="list">
+        <li><b>SID and SOD –</b> SID is a data line for serial input where as SOD is a data line for serial output.
+        </li>
+      </ul>
+    </section>
+    <section class="main-section" id=""></section>
+    <section class="main-section"></section>
 	</main>
 </body>
 </html>
