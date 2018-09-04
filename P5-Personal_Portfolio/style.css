@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: system-ui;
+  font-size: 18px;
+}
+
+.flex-box{
+  display: flex;
+}
+#header{
+/*   display: flex; */
+  background: #1f1f1f;
+  color: white;
+}
+
+#nav-bar ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+.nav-link{
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+#nav-bar ul li {
+  border: 1px solid green;
+  padding: 12px 18px;
+}
+
+#nav-bar ul li:hover{
+  color: #EEA282;
+  border-bottom: 3px solid    chocolate; 
+  cursor: pointer;
+}
+
+#pg1{
+  flex-direction: column;
+  justify-content:;
+  color: white;
+  height: 400px;
+  text-align: center;
+  background-image:
+  linear-gradient(to bottom,     rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://images.pexels.com/photos/333850/pexels-photo-333850.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repreat;
+  position: center;
+  background-size: cover; 
+}
