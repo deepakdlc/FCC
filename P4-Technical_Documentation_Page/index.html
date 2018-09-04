@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Technical Documentation Page</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<nav id="navbar" class="side-nav column">
-		<!-- <div class="top-left">top-left</div> 
-		<div class="bottom">bottom</div> -->
-		<header><strong>Microprocessor-8085</strong></header>
-		<ul>
-			<li><a href="#Introduction" class="nav-link">Introduction</a></li>
-			<li><a href="#Functional_Units" class="nav-link">Functional Units</a></li>
-			<li><a href="#8085_Architecture" class="nav-link">Architecture</a></li>
-			<li><a href="#" class="nav-link">8085 Pin Configuration</a></li>
-			<li><a href="#" class="nav-link">Link</a></li>
-		</ul>	
-	</nav>
 
-	<main id="main-doc" class="column">
-		<section class="main-section" id="Introduction">
-      <header>
-        <h2>Introduction</h2>
-        <p>It is an 8-bit microprocessor designed by Intel in 1977 using NMOS technology.</p>
-      </header>
+<head>
+  <title>Technical Documentation Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <nav id="navbar" class="side-nav column">
+    <!-- <div class="top-left">top-left</div> 
+    <div class="bottom">bottom</div> -->
+    <header>Microprocessor-8085</header>
+    <ul>
+      <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+      <li><a href="#Functional_Units" class="nav-link">Functional Units</a></li>
+      <li><a href="#8085_Architecture" class="nav-link">8085 Architecture</a></li>
+      <li><a href="#8085_Pin_Configuration" class="nav-link">8085 Pin Configuration</a></li>
+      <li><a href="#Addressing_modes" class="nav-link">Addressing modes</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-doc" class="column">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>It is an 8-bit microprocessor designed by Intel in 1977 using NMOS technology.</p>
       <p>It has the following configuration −</p>
       <code>
         <ul class="list">
@@ -38,37 +38,36 @@
       </code>
     </section>
     <section class="main-section" id="Functional_Units">
-      <header>
-        <h2>Functional Units</h2>
-        <p>8085 consists of the following functional units −</p>
-      </header>
+      <header>Functional Units</header>
+      <p>8085 consists of the following functional units −</p>
+
       <h3>Accumulator</h3>
       <p>It is an 8-bit register used to perform arithmetic, logical, I/O &amp; LOAD/STORE operations.<i> It is connected to internal data bus &amp; ALU.</i></p>
-      
+
       <h3>Arithmetic and logic unit</h3>
       <p>It performs arithmetic and logical operations like Addition, Subtraction, AND, OR, etc. on 8-bit data.</p>
-      
+
       <h3>General purpose register</h3>
       <p>There are 6 general purpose registers in 8085 processor, i.e. B, C, D, E, H &amp; L. Each register can hold 8-bit data.</p>
       <p>These registers can work in pair to hold 16-bit data and their pairing combination is like B-C, D-E &amp; H-L.</p>
-      
+
       <h3>Program counter</h3>
       <p>It is a 16-bit register used to store the memory address location of the next instruction to be executed.</p>
-      
+
       <h3>Stack pointer</h3>
       <p>It is also a 16-bit register works like stack, which is always incremented/decremented by 2 during push &amp; pop operations.</p>
-      
+
       <h3>Temporary register</h3>
       <p>It is an 8-bit register, which holds the temporary data of arithmetic and logical operations.</p>
-      
+
       <h3>Flag register</h3>
       <p>It is an 8-bit register having five 1-bit flip-flops, which holds either 0 or 1 depending upon the result stored in the accumulator.</p>
       <p>These are the set of 5 flip-flops −</p>
       <ul class="list">
-        <li>Sign (S)</li> 
-        <li>Zero (Z)</li> 
-        <li>Auxiliary Carry (AC)</li> 
-        <li>Parity (P)</li> 
+        <li>Sign (S)</li>
+        <li>Zero (Z)</li>
+        <li>Auxiliary Carry (AC)</li>
+        <li>Parity (P)</li>
         <li>Carry (C)</li>
       </ul>
       <table class="table table-bordered">
@@ -84,21 +83,21 @@
         </thead>
         <tdata>
           <tr>
-          <td>S</td>
-          <td>Z</td>
-          <td></td>
-          <td>AC</td>
-          <td></td>
-          <td>P</td>
-          <td></td>
-          <td>CY</td>
+            <td>S</td>
+            <td>Z</td>
+            <td></td>
+            <td>AC</td>
+            <td></td>
+            <td>P</td>
+            <td></td>
+            <td>CY</td>
           </tr>
         </tdata>
       </table>
-      
+
       <h3>Instruction register and decoder</h3>
       <p>It is an 8-bit register. When an instruction is fetched from memory then it is stored in the Instruction register. Instruction decoder decodes the information present in the Instruction register.</p>
-      
+
       <h3>Timing and control unit</h3>
       <p>It provides timing and control signal to the microprocessor to perform operations. Following are the timing and control signals, which control external and internal circuits −</p>
       <code><ul class="list">
@@ -108,35 +107,33 @@
         <li>RESET Signals: RESET IN, RESET OUT</li>
       </ul>
       </code>
-      
+
       <h3>Interrupt control</h3>
-      <p>It controls the interrupts during a process. When a microprocessor is executing a main program and whenever an interrupt occurs, the microprocessor shifts the control from the main program to process the incoming request. After the request is completed, the control goes back to the main program.</p>
+      <p>It controls the interrupts during a process. When a microprocessor is executing a main program and whenever an interrupt occurs, the microprocessor shifts the control from the main program to process the incoming request. After the request is completed,
+        the control goes back to the main program.</p>
       <code><p>There are 5 interrupt signals in 8085 microprocessor: INTR, RST 7.5, RST 6.5, RST 5.5, TRAP.</p></code>
-      
+
       <h3>Serial Input/output control</h3>
       <p>It controls the serial data communication by using these two instructions: SID (Serial input data) and SOD (Serial output data).</p>
-      
+
       <h3>Address buffer and address-data buffer</h3>
-      <p>The content stored in the stack pointer and program counter is loaded into the address buffer and address-data buffer to communicate with the CPU. The memory and I/O chips are connected to these buses; the CPU can exchange the desired data with the memory and I/O chips.</p>
-      
+      <p>The content stored in the stack pointer and program counter is loaded into the address buffer and address-data buffer to communicate with the CPU. The memory and I/O chips are connected to these buses; the CPU can exchange the desired data with
+        the memory and I/O chips.</p>
+
       <h3>Address bus and data bus</h3>
       <p>Data bus carries the data to be stored. It is bidirectional, whereas address bus carries the location to where it should be stored and it is unidirectional. It is used to transfer the data &amp; Address I/O devices.</p>
     </section>
-    <section class="main-section" id="8085_Architecture" >
-      <header>
-        <h2>8085 Architecture</h2>
-        <p>We have tried to depict the architecture of 8085 with this following image −</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Intel_8085_arch.svg/800px-Intel_8085_arch.svg.png" alt="_blank">
-      </header>
+    <section class="main-section" id="8085_Architecture">
+      <header>8085 Architecture</header>
+      <p>We have tried to depict the architecture of 8085 with this following image −</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Intel_8085_arch.svg/800px-Intel_8085_arch.svg.png" alt="_blank">
     </section>
     <section class="main-section" id="8085_Pin_Configuration">
-      <header>
-        <h1>Microprocessor - 8085 Pin Configuration</h1>
-        <p>Pin diagram of 8085 microprocessor is as given below:</p>
-        <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/8085-PIN-1.png" alt="">
-      </header>
+      <header>8085 Pin Configuration</header>
+      <p>Pin diagram of 8085 microprocessor is as given below:</p>
+      <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/8085-PIN-1.png" alt="">
       <p>The pins of a 8085 microprocessor can be classified into seven groups-</p>
-      
+
       <h3>Address bus</h3>
       <p>It is a group of wires or lines used to transfer the addresses of Memory or I/O devices.</p>
       <ul class="list">
@@ -144,16 +141,16 @@
         <li>It is unidirectional that is address flows from microprocessor to prepherial(memory-devices).</li>
         <li>This bus is multiplexed with 8 bit data bus. So the most significant bits (MSB) of address goes through Address bus (A7-A0) and LSB goes through multiplexed data bus (AD0-AD7).</li>
       </ul>
-      
+
       <h3>Data bus</h3>
       <p>It is used to transfer data within Microprocessor and Memory/Input or Output devices.</p>
       <ul class="list">
-       <li>AD7-AD0, it carries the <em>least significant 8-bit</em> address and data bus.</li>
-       <li>It is bidirectional as Microprocessor requires to send or receive data.</li> 
-       <li>The data bus also works as address bus when multiplexed with lower order address bus.</li>
-       <li>The word length of a processor depends on data bus, thats why Intel 8085 is called 8 bit Microprocessor because it have an 8 bit data bus.</li>  
+        <li>AD7-AD0, it carries the <em>least significant 8-bit</em> address and data bus.</li>
+        <li>It is bidirectional as Microprocessor requires to send or receive data.</li>
+        <li>The data bus also works as address bus when multiplexed with lower order address bus.</li>
+        <li>The word length of a processor depends on data bus, thats why Intel 8085 is called 8 bit Microprocessor because it have an 8 bit data bus.</li>
       </ul>
-      
+
       <h3>Control and status signals</h3>
       <p>Three control signals are RD, WR &amp; ALE.</p>
       <code>
@@ -173,10 +170,10 @@
       <table style="width:80%">
         <thead>
           <tr>
-          <th>IO/M’</th>
-          <th>S1</th>
-          <th>S0</th>
-          <th>Data Bus Status</th>
+            <th>IO/M’</th>
+            <th>S1</th>
+            <th>S0</th>
+            <th>Data Bus Status</th>
           </tr>
         </thead>
         <tbody>
@@ -224,10 +221,10 @@
           </tr>
         </tbody>
       </table>
-      
+
       <h3>Power supply</h3>
       <p>There are 2 power supply signals − VCC &amp; VSS. VCC indicates +5v power supply and VSS indicates ground signal.</p>
-      
+
       <h3>Power Supply and Clock Frequency:</h3>
       <code><ul class="list">
         <li><b>Vcc –</b> +5v power supply
@@ -239,27 +236,37 @@
         <li><b>CLK (OUT) –</b> This signal can be used as the system clock for other devices.
         </li>
       </ul></code>
-      
+
       <h3>Interrupts &amp; externally initiated signals</h3>
       <p>The 8085 has five interrupt signals that can be used to interrupt a program execution.</p>
       <p>
-        (i) INTR<br>
-        (ii) RST 7.5<br>
-        (iii) RST 6.5<br>
-        (iv) RST 5.5<br>
-        (v) TRAP
+        (i) INTR<br> (ii) RST 7.5<br> (iii) RST 6.5<br> (iv) RST 5.5<br> (v) TRAP
       </p>
       <p>In addition to Interrupts, there are three externally initiated signals namely RESET, HOLD and READY. To respond to HOLD request, it has one signal called HLDA.</p>
       <ul class="list">
-        <li><p><b>INTR</b> – It is an interrupt request signal.</p></li>
-        <li><p><b>INTA</b> − It is an interrupt acknowledgment signal sent by the microprocessor after INTR is received.</p></li> 
-        <li><p><b>RESET IN</b> − This signal is used to reset the microprocessor by setting the program counter to zero.</p></li>
-        <li><p><b>RESET OUT</b> − This signal is used to reset all the connected devices when the microprocessor is reset.</p></li>
-        <li><p><b>READY</b> − This signal indicates that the device is ready to send or receive data. If READY is low, then the CPU has to wait for READY to go high.</p></li>
-        <li><p><b>HOLD</b> − This signal indicates that another master is requesting the use of the address and data buses.</p></li>
-        <li><p><b>HLDA (HOLD Acknowledge)</b> − It indicates that the CPU has received the HOLD request and it will relinquish the bus in the next clock cycle. HLDA is set to low after the HOLD signal is removed.</p></li>
-    </ul>
-      
+        <li>
+          <p><b>INTR</b> – It is an interrupt request signal.</p>
+        </li>
+        <li>
+          <p><b>INTA</b> − It is an interrupt acknowledgment signal sent by the microprocessor after INTR is received.</p>
+        </li>
+        <li>
+          <p><b>RESET IN</b> − This signal is used to reset the microprocessor by setting the program counter to zero.</p>
+        </li>
+        <li>
+          <p><b>RESET OUT</b> − This signal is used to reset all the connected devices when the microprocessor is reset.</p>
+        </li>
+        <li>
+          <p><b>READY</b> − This signal indicates that the device is ready to send or receive data. If READY is low, then the CPU has to wait for READY to go high.</p>
+        </li>
+        <li>
+          <p><b>HOLD</b> − This signal indicates that another master is requesting the use of the address and data buses.</p>
+        </li>
+        <li>
+          <p><b>HLDA (HOLD Acknowledge)</b> − It indicates that the CPU has received the HOLD request and it will relinquish the bus in the next clock cycle. HLDA is set to low after the HOLD signal is removed.</p>
+        </li>
+      </ul>
+
       <h3>Serial I/O Ports:</h3>
       <p>Serial transmission in 8085 is implemented by the two signals -</p>
       <ul class="list">
@@ -267,8 +274,82 @@
         </li>
       </ul>
     </section>
-    <section class="main-section" id=""></section>
-    <section class="main-section"></section>
-	</main>
+    <section class="main-section" id="Addressing_modes">
+      <header>Addressing modes</header>
+      <div>
+        <p><em>The way of specifying data to be operated by an instruction is         called addressing mode.</em></p>
+        <p>These are the instructions used to transfer the data from one register to another register, from the memory to the register, and from the register to the memory without any alteration in the content. </p>
+      </div>
+      <h3>Types of addressing modes –</h3>
+      <p>In 8085 microprocessor there are 5 types of addressing modes:</p>
+
+      <ol class="list">
+
+        <li>
+          <strong>Immediate addressing mode</strong>
+          <p>In this mode, the 8/16-bit data is specified in the instruction itself as one of its operand.</p>
+          <em>In immediate addressing mode the source operand is always data.</em>
+          <p><b>Examples:</b><br>
+            <code>
+            ADD 7 (which says Add 7 to contents of accumulator. 7 is the operand here)<br>
+            MVI B 45      (move the data 45H immediately to register B)<br>
+            LXI H 3050    (load the H-L pair with the operand 3050H immediately)<br>
+            JMP address   (jump to the operand address immediately)
+          </code>
+          </p>
+        </li>
+
+        <li>
+          <strong>Register Addressing Mode –</strong>
+          <p>In this mode, the data is copied from one register to another.</p>
+          <p><b>Examples:</b><br>
+            <code>
+              MOV A, B       (copy the contents of register B to register A)<br>
+              ADD B         (add contents of registers A and B and store the result in                                  register A)<br>
+              INR A         (increment the contents of register A by one)
+            </code>
+          </p>
+        </li>
+
+        <li>
+          <strong>Direct addressing mode</strong>
+          <p>In this mode, the data is directly copied from the given address to the register.</p>
+          <p><b>Examples:</b><br>
+            <code>
+              LDA 2050      (load the contents of memory location into accumulator A)<br>
+              LHLD address  (load contents of 16-bit memory location into H-L register                                  pair)<br>
+              IN 35         (read the data from port whose address is 01)
+            </code>
+          </p>
+        </li>
+
+        <li>
+          <strong>Indirect addressing mode</strong>
+          <p>In this mode, the data is transferred from one register to another by using the address pointed by the register.</p>
+          <em>IN register indirect addressing mode, the data to be operated is available             inside a memory location and that memory location is indirectly specified b a             register pair.</em>
+          <p><b>Examples:</b><br>
+            <code> 
+              MOV A, M       (move the contents of the memory location pointed by the H-L               pair to the accumulator)<br>
+              LDAX B        (move contains of B-C register to the accumulator)<br>
+              LXIH 9570     (load immediate the H-L pair with the address of the location               9570)
+            </code>
+          </p>
+        </li>
+
+        <li>
+          <strong>Implied/Implicit Addressing Mode –</strong>
+          <p>This mode doesn’t require any operand; the data is specified by the opcode itself</p>
+          <p><b>Examples:</b><br>
+            <code>
+            CMA           (finds and stores the 1’s complement of the contains of                                    accumultor A in A)<br>
+            RRC           (rotate accumulator A right by one bit)<br>
+            RLC           (rotate accumulator A left by one bit)
+            </code>
+          </p>
+        </li>
+      </ol>
+    </section>
+  </main>
 </body>
+
 </html>
