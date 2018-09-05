@@ -1,16 +1,19 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body{
   font-family: system-ui;
   font-size: 18px;
+  line-height: 1.6;
 }
 
-.flex-box{
-  display: flex;
+body,html{
+  height: 100%;
 }
+
 #header{
 /*   display: flex; */
   background: #1f1f1f;
@@ -21,6 +24,7 @@ body{
   display: flex;
   list-style-type: none;
   justify-content: flex-end;
+
 }
 .nav-link{
   display: block;
@@ -39,16 +43,34 @@ body{
   cursor: pointer;
 }
 
+.flex-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
 #pg1{
-  flex-direction: column;
-  justify-content:;
+  /*flex-direction: column;*/
   color: white;
-  height: 400px;
+  height: 100%;
   text-align: center;
-  background-image:
-  linear-gradient(to bottom,     rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url("https://images.pexels.com/photos/333850/pexels-photo-333850.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  background-repeat: no-repreat;
-  position: center;
-  background-size: cover; 
+  background:
+    linear-gradient(to bottom,     rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+    url("https://images.pexels.com/photos/333850/pexels-photo-333850.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    no-repeat center;
+  background-size: cover;
+}
+
+.transparent-box{
+  background-color: rgba(0,0,0,0.5);
+  width: 70%;
+  margin: 0 auto;
+}
+
+h1,h2{
+  margin: 18px;
+}
+p{
+  padding: 12px;
 }
