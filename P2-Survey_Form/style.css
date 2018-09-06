@@ -1,21 +1,66 @@
-html, body {
-  background: #f1f1f1;
-  font-family: 'Merriweather', sans-serif;
-  padding: 1em;
+*{
+  border: none;
 }
-ff
+html, body {
+  text-align: center;
+  background: #f1f1f1;
+  font-family: 'Helvetica', sans-serif;
+  padding: 1rem;
+}
+
 
 #container{
-	background-color: lightgrey;
+	background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 2%;
+}
+	
+input,select, text-area{
+  width: 100%;
+  padding: 2%;
+  border: 1px solid #1f1f1f;
+  border-radius: 4px;
+  box-sizing: border-box; /* if my box width is 100px then it automatically adjust border and padding px and get shrink and give 100px width;*/
+  resize: vertical;
 }
 
-#container > div{
-	background-color: orangered;
-	margin: 10px;
-	/*width: 50px;
-	height: 50px;*/
-}*/
+input,select, text-area:focus{
+  border: 2px solid #3f3f3f
+}
+label{
+  padding: 12px 12px 12px 0;
+  display: inline-block;/* top and bottom margin are respected but with display:inlne not , also it doesnt create line break like display: block*/
+}
 
-{
-	text-align: center;
-}	
+button{
+  background-color: rgba(51,153,255,.8);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right; 
+}
+
+
+
+.col-left{
+  float:left;
+  width: 25%;
+  text-align: right;
+  margin-top: 6px;
+}
+
+.col-right{
+  float: left;
+  width: 75%;
+  text-align: left;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
