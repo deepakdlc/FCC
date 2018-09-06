@@ -50,7 +50,7 @@ body,html{
   align-content: center;
 }
 
-#pg1{
+#welcome-section{
   /*flex-direction: column;*/
   color: white;
   height: 100%;
@@ -67,6 +67,19 @@ body,html{
   width: 70%;
   margin: 0 auto;
 }
+
+#projects{
+  text-align: center;
+  flex-direction: column;
+}
+
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+
 
 h1,h2{
   margin: 18px;
