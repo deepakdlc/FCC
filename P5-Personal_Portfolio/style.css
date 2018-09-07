@@ -70,7 +70,15 @@ body,html{
 
 #projects{
   text-align: center;
-  flex-direction: column;
+  height: 100%;
+}
+.project-box{
+  display: flex;
+  flex: flex-wrap;
+  justify-content: space-around;
+}
+.flex-link{
+  /*flex-basis: 400px;*/
 }
 
 
@@ -78,8 +86,6 @@ img{
   width: 100%;
   height: auto;
 }
-
-
 
 h1,h2{
   margin: 18px;
