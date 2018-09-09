@@ -43,15 +43,16 @@ body,html{
   cursor: pointer;
 }
 
-.flex-box{
+/* .flex-box{
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
-}
+} */
 
 #welcome-section{
-  /*flex-direction: column;*/
+  display: flex;
+  flex-flow: column wrap;
   color: white;
   height: 100%;
   text-align: center;
@@ -63,6 +64,7 @@ body,html{
 }
 
 .transparent-box{
+  align-self: center;
   background-color: rgba(0,0,0,0.5);
   width: 70%;
   margin: 0 auto;
@@ -73,13 +75,24 @@ body,html{
   height: 100%;
 }
 .project-box{
+  border: 1px solid orange;
   display: flex;
-  flex: flex-wrap;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
-.flex-link{
-  /*flex-basis: 400px;*/
+.project-title{
+  background-color: #1f1f1f;
+  color: white;
+  padding: 10px 0;
+  font-style: italic;
 }
+.flex-link{
+  flex: 0 1 45%;
+  text-decoration: none; /*anchor tag decoration*/
+  border: 1px solid black;
+  margin: 40px 0px; 
+}
+
 
 
 img{
