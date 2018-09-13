@@ -12,9 +12,8 @@
   <header id="header">
     <nav id="navbar">
       <ul>
-        <li><a href="#header" class="nav-link">Home</a></li>
-        <li><a href="#About" class="nav-link">About</a></li>
-        <li><a href="#Portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#welcome-section" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Portfolio</a></li>
         <li><a href="#Contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
@@ -29,7 +28,7 @@
       </div>
   </div>
   
-  <div id="Portfolio" class="projects">
+  <div id="projects">
     <div class="pg-header">
       <h2>Portfolio</h2>
     </div>
@@ -38,22 +37,22 @@
     <div class="project-box">
       <a class="flex-link" href="https://codepen.io/CoderOO7/full/wxRgQy" target="_blank">
         <img src="https://user-images.githubusercontent.com/24404523/45253496-e479a600-b385-11e8-95e8-ca4cdad56e1c.JPG">
-        <div class="project-title">Tribute Page</div>
+        <div class="project-tile">Tribute Page</div>
       </a>
 
       <a class="flex-link" href="https://codepen.io/CoderOO7/full/LBqpOw" target="_blank">
         <img src="https://user-images.githubusercontent.com/24404523/45253495-e479a600-b385-11e8-857b-9421d37ef52e.JPG">
-        <div class="project-title">Survey Form</div>
+        <div class="project-tile">Survey Form</div>
       </a>
 
       <a class="flex-link" href="https://codepen.io/CoderOO7/full/EpqGBe" target="_blank">
         <img src="https://user-images.githubusercontent.com/24404523/45253498-e5123c80-b385-11e8-9b39-fd5cc622e3a6.JPG">
-        <div class="project-title">Product Landing Page</div>
+        <div class="project-tile">Product Landing Page</div>
       </a>
 
       <a class="flex-link" href="https://codepen.io/CoderOO7/full/qMEMJX/" target="_blank">
         <img src="https://user-images.githubusercontent.com/24404523/45253497-e5123c80-b385-11e8-9c6e-06579520314a.JPG">
-        <div class="project-title">Technical Documentation page</div>
+        <div class="project-tile">Technical Documentation page</div>
       </a>
     </div>
   </div>
@@ -64,22 +63,22 @@
     </div>
     <div class="contact-box">
       <div class="contact-link-box">
-        <p><em>You can reach to me through these social link easily.But currently
-        I'm more active on Twitter.Leave me message may be we can become friends.</em></p><br>
-        <a href="https://www.quora.com/profile/Shubham-Yadav-355" class="social-btn quora-link" target="_blank"><i class="fa fa-quora" aria-hidden="true"></i>Quora</a>
-        <a href="https://twitter.com/CoderOO7" class="social-btn twitter-link"  target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a>
-        <a href="https://github.com/CoderOO7" class="social-btn github-link" target="blank"><i class="fa fa-github" aria-hidden="true"></i>Github</a>
-        <a href="https://www.instagram.com/coder.007/" class="social-btn instagram-link" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a>
+        <p style="text-align: justify"><em>You can reach to me through these social link easily.But currently
+        I'm more active on Twitter. Leave me message may be we can become friends.</em></p><br>
+        <a id="profile-link" href="https://www.quora.com/profile/Shubham-Yadav-355" class="social-btn quora-link" target="_blank"><i class="fa fa-quora"></i>Quora</a>
+        <a href="https://twitter.com/CoderOO7" class="social-btn twitter-link"  target="_blank"><i class="fa fa-twitter"></i>Twitter</a>
+        <a href="https://github.com/CoderOO7" class="social-btn github-link" target="blank"><i class="fa fa-github"></i>Github</a>
+        <a href="https://www.instagram.com/coder.007/" class="social-btn instagram-link" target="_blank"><i class="fa fa-instagram"></i>Instagram</a>
       </div>
       <div class="contact-form-box">
         <form action="" class="contact-form">
-          <label for="">Name</label>
-          <input type="text" placeholder="Your name">
-          <label for="" >Email-Address</label>
-          <input type="text" placeholder="xyz-@gmail.com">
-          <label for="">Enter Message</label>
-          <textarea rows=8 placeholder="Hello CoderOO7"></textarea>
-          <input type="submit" class="submit-btn" name="">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name" required>
+          <label for="email" >Email-Address</label>
+          <input id="email" type="text" pattern="+@gmail.com" placeholder="xyz@gmail.com" required>
+          <label for="msg">Enter Message</label>
+          <textarea id="msg" rows=8 placeholder="Hello CoderOO7"></textarea>
+          <input type="submit" class="submit-btn" name="" required>
         </form>
       </div>
     </div>
