@@ -15,3 +15,14 @@ function mutation(arr) {
 }
 
 mutation(["hello", "hey"]);
+
+
+//Other Method
+
+function mutation(arr) {
+  let str1 = arr[0].toLowerCase();
+  let str2 = arr[1].toLowerCase().split(''); //split() used b/c every() cannot iterate through string...
+ 
+  return str2.every(currChar => str1.indexOf(currChar)!=-1);
+
+}
