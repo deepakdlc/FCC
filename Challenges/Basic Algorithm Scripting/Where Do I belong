@@ -1,0 +1,32 @@
+//My Solution
+
+function getIndexToIns(arr, num) {
+  // Find my place in this sorted array.
+  function sort(arr){
+    let swap = true;
+    while(swap == true){
+      swap = false;
+      for(let i=0;i<arr.length-1;i++){  
+        if(arr[i]>arr[i+1]){
+          arr[i] = arr[i]+arr[i+1];       
+          arr[i+1] = arr[i] -arr[i+1];
+          arr[i] = arr[i] - arr[i+1];
+          swap = true;
+        }
+      }
+    }
+  }
+  sort(arr);
+  if(num>arr[arr.length-1]){return arr.length;}
+  else if(arr[0] == undefined){return 0;} 
+  for(let i=0; i<arr.length-1; i++){
+    if(num>arr[i] && num<=arr[i+1]){
+      return i+1;
+    }
+    else if(num==arr[i]){
+      return i;
+    }
+  }
+}
+
+getIndexToIns([40, 60], 50);
