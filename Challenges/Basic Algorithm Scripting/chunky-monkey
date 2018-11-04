@@ -22,3 +22,20 @@ function chunkArrayInGroups(arr, size) {
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
 
+
+
+//Other Solution
+
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  let newArr = [];
+  let len = arr.length;
+  
+  for(let i=0; i<len; i+=size){
+    newArr.push(arr.slice(i,size+i));
+  }
+
+  return newArr;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
