@@ -1,0 +1,24 @@
+Problem: https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/chunky-monkey/
+
+//My solution
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  let newArr = [];
+  let tempArr = arr.slice();
+  let len = arr.length;
+  let CompletePairForm = Math.floor(len/size);
+  
+  //It form 2d array of completePairs
+  for(let i=0; i<CompletePairForm; i++){
+    newArr.push(tempArr.splice(0,size));
+  }
+
+  //It push array of remaining elements in tempArr to newArr
+  if(tempArr.length!=0){
+    newArr.push(tempArr.splice(0,));
+  }
+  return newArr;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
