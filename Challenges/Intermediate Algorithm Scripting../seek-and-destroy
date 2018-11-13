@@ -1,0 +1,15 @@
+https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/seek-and-destroy
+
+//MY Solution
+
+#### [1]
+function destroyer(arr) {
+  // Remove all the values
+  let arr2 = [...arguments];
+  arr2.shift();
+  
+  return arr.filter(item=>arr2.indexOf(item)==-1);
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
