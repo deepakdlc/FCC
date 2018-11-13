@@ -8,9 +8,7 @@ function sumAll(arr) {
   let max = arr[1];
   
   if(min > max){  // Swapping
-    min = min + max;
-    max = min - max ;
-    min = min - max;
+    [min,max] = [max,min]
   }
 
   for(let i = min; i <= max; i++){
