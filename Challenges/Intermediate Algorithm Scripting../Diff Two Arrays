@@ -26,9 +26,10 @@ diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 function diffArray(arr1, arr2) {
   var newArr = [];
   // Same, same; but different.
-  var a = arr1.filter(item=>arr2.indexOf(item)===-1);
-  var b = arr2.filter(item=>arr1.indexOf(item)===-1);
-  return newArr = a.concat(b);
+  function compare(a,b){
+     return a.filter(item => b.indexOf(item)===-1);
+  }
+  return newArr = compare(arr1,arr2).concat(compare(arr2,arr1));
 }
 
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
