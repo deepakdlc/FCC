@@ -13,3 +13,7 @@ function destroyer(arr) {
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 
+
+//Advanced Code Solution:
+
+const destroyer = (arr, ...args) => arr.filter(i => !args.includes(i));
