@@ -1,0 +1,22 @@
+https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/pig-latin/
+
+//My Solution
+
+function translatePigLatin(str) {
+  let check = /^[aeiou]/.test(str);
+
+  if(check){
+    return str+"way";
+  }
+  else if(/\b[^aeiou]+\b/.test(str)){
+    return str+"ay";
+  }
+  else{
+    return str.replace(/(^[^aeiou]+)(\w+)/,'$2$1ay')
+  }  
+}
+
+translatePigLatin("consonant");
+
+//Others:
+
