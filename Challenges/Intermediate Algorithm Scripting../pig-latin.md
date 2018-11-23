@@ -1,7 +1,8 @@
 https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/pig-latin/
 
-//My Solution
+## [My Solution]
 
+```javascript
 function translatePigLatin(str) {
   let check = /^[aeiou]/.test(str);
 
@@ -17,11 +18,13 @@ function translatePigLatin(str) {
 }
 
 translatePigLatin("consonant");
+```
 
-//Others:
+## [Others]
 
 ### Basic
 
+```javascript
 function translatePigLatin(str) {
   // Create variables to be used
   var pigLatin = '';
@@ -49,9 +52,10 @@ function translatePigLatin(str) {
 
 // test here
 translatePigLatin("consonant");
-
+```
 
 ### Advance
+```javascript
 function translatePigLatin(str) {
     var strArr = [];
     var tmpChar;
@@ -76,4 +80,4 @@ function translatePigLatin(str) {
  // convert array to string and concatenate "ay" at the end
  return strArr.join("")+"ay";
 }
-
+```
