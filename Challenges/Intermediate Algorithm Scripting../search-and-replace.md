@@ -97,4 +97,5 @@ function myReplace(str, before, after) {
     const replacingStr = textCase(after, textCase(before));
 
     return str.replace(regex, replacingStr);
+}
 ```
