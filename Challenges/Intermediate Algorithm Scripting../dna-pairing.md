@@ -24,8 +24,8 @@ pairElement("GCG");
 ```
 
 
-### [Other]
-## Advance
+## [Other]
+### Advance
 
 ```js
     function pairElement(str) {
