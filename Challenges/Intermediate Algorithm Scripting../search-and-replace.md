@@ -1,7 +1,7 @@
 https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/search-and-replace/
 
 ### [My Solution]
-
+```javascript
 function myReplace(str, before, after) {
   var i = str.indexOf(before);
   var checkUpper = /[A-Z]/.test(str[i]);
@@ -13,3 +13,4 @@ function myReplace(str, before, after) {
 }
 
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+```
