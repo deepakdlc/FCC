@@ -21,6 +21,7 @@ fearNotLetter("abce");
 ## [OTHERS]
 
 ### Simplified Advanced
+```js
 function fearNotLetter(str) {
   for (let i = 1; i < str.length; ++i) {
     if (str.charCodeAt(i) - str.charCodeAt(i-1) > 1) {
@@ -28,8 +29,10 @@ function fearNotLetter(str) {
     }
   }
 }
+```
 
 ### Advanced
+```js
 function fearNotLetter(str) {
   var allChars = '';
   var notChars = new RegExp('[^'+str+']','g');
@@ -39,6 +42,4 @@ function fearNotLetter(str) {
 
   return allChars.match(notChars) ? allChars.match(notChars).join('') : undefined;
 }
-
-// test here
-fearNotLetter("abce");
+```
