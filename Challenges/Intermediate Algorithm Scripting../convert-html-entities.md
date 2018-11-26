@@ -11,7 +11,6 @@ function convertHTML(str) {
     '>': '&gt;',
     '\"' : '&quot;',
     '\'' : '&apos;',
-    '\w' : '\w',
     'abc' : 'abc'
   }
   var arr = str.match(/&|>|<|"|'|abc/g);
