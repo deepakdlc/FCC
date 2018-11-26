@@ -2,6 +2,7 @@ https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/interme
 
 ## [My Solutions]
 
+```js
 function convertHTML(str) {
   // &colon;&rpar;
   let charToHTML = {
@@ -21,3 +22,4 @@ function convertHTML(str) {
 }
 
 convertHTML("Dolce & Gabbana");
+```
