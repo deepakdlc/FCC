@@ -12,7 +12,7 @@ https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/interme
       primeArr.push(i);
     }
   }
-  console.log(primeArr);
+  
   return primeArr.reduce((acc,curr)=>{
     return acc+curr;
   })
@@ -28,5 +28,7 @@ function checkPrime(num){
   }
   return true;
 }
+
+sumPrimes(10);
 ```
 ## [OTHERS]
