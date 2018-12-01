@@ -1,6 +1,41 @@
 https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/smallest-common-multiple/
 
-### [OTHERS]
+## [MY SOLUTIONS]
+
+```JS
+function smallestCommons(arr) {
+  //let arr = [1,5]
+  let a = arr[0];
+  let b = arr[1];
+
+  if(a<b){
+    // a = greatest Number and b= smallest Number
+    [a,b] = [b,a] //Swapping        
+  }
+  
+  
+  var scm = a;  // let smallestCommonMultiplier is the greatest number 'a', every number is the scm of itself;
+  var n1 = a;   // n1 = 5
+  var n2 = a-1; // n2 = 4
+  
+  var i = a;
+  while(i>b){
+    if(n1 % n2 == 0){
+      scm = n1;
+      i--;
+      n2--;
+    }else{
+      n1 += scm ; 
+    } 
+  }
+
+  return scm;
+}
+
+smallestCommons([1,13]);
+```
+
+## [OTHERS]
 ```js
 function smallestCommons(arr) {
   // Sort array from greater to lowest
