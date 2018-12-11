@@ -5,9 +5,8 @@ https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/javascr
 ```JS
 function telephoneCheck(str) {
   // Good luck!
-  var check = /(^1\s?)|(\d{3}|\(\d{3}\))([\s-]?)\d{3}\3?\d{4}$/.test(str)
-  console.log(check);
-  return check;
+  return /^(1\s?)?(\(\d{3}\)|\d{3})[ -]?\d{3}[ -]?\d{4}$/.test(str);
+
 }
 
 telephoneCheck("555-555-5555");
