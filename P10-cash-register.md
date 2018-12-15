@@ -1,8 +1,9 @@
 https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/cash-register/
 
-```jsfunction checkCashRegister(price, cash, cid) {
+```js
+function checkCashRegister(price, cash, cid) {
   var change = [];
-  var amntDue = (cash-price).toFixed(2);
+  var amntDue = (cash-price);
    
   var check = function (total){
     if(total>=amntDue) return true;
@@ -21,14 +22,18 @@ https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/javascr
     ["ONE HUNDRED", 100]
   ]
 
-  var total = cid.map(arr=>arr[1]).reduce((a,b)=>a+b).toFixed(2);
-
+  var total = cid.map(arr=>arr[1]).reduce((a,b)=>a+b);
+  if(amntDue == total){
+    return {status: "CLOSED", change: cid};
+  }
+  else if(amntDue>total){
+    return  {status: "INSUFFICIENT_FUNDS", change: []};
+  }
   var i = 0;
   while(amntDue > coinValue[i][1]){
     i++;
   }
 
-  console.log(i);
   for(var j=i-1; j>=0; j--){
     if(cid[j][1]>0 && amntDue>coinValue[j][1]){
       var need = Math.floor((amntDue/coinValue[j][1]))*coinValue[j][1];
@@ -44,8 +49,11 @@ https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/javascr
     }
   }
   
-  console.log(change);
-  return change;
+  if(amntDue!=0){
+    return{status: "INSUFFICIENT_FUNDS", change: []}
+  }
+  else;
+    return {status: "OPEN", change: change};
 }
 
 // Example cash-in-drawer array:
@@ -59,5 +67,5 @@ https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/javascr
 // ["TWENTY", 60],
 // ["ONE HUNDRED", 100]]
 
-checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])
+checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
 ```
