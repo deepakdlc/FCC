@@ -34,8 +34,8 @@ function whatIsInAName(collection, source) {
   var arr = [];
   let check = null;
   // Only change code below this line
-  return Object.keys(source);
-  arr =  collection.filter(obj =>{
+  let keys = Object.keys(source);
+  return collection.filter(obj =>{
     return keys.every(prop=> obj.hasOwnProperty(prop) && obj[prop] == source[prop])
   });
   // Only change code above this line;
