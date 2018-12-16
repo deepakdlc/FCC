@@ -1,7 +1,7 @@
 https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/pig-latin/
 
 ## [My Solution]
-
+### [1]
 ```javascript
 function translatePigLatin(str) {
   let check = /^[aeiou]/.test(str);
@@ -19,7 +19,15 @@ function translatePigLatin(str) {
 
 translatePigLatin("consonant");
 ```
+### [2]
+```js
+function translatePigLatin(str) {
+  let consonant = str.match(/^[^aeiou]+/);
+  return Boolean(consonant) ? str.slice(consonant[0].length,) + consonant[0] + "ay" : str + "way";
+}
 
+translatePigLatin("glove");
+```
 ## [Others]
 
 ### Basic
